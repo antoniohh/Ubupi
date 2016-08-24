@@ -9,6 +9,46 @@
 
 # Script creado por Antonio Horrillo.
 
+# Repositorio Java de Oracle.
+sudo add-apt-repository ppa:webupd8team/java
+
+# Repositorio Sublime Text 3.
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+
+# Repositorio Brackets.
+sudo add-apt-repository ppa:webupd8team/brackets
+
+# Repositorio Atom.
+sudo add-apt-repository ppa:webupd8team/atom
+
+# Repositorio Handbrake.
+sudo add-apt-repository ppa:stebbins/handbrake-snapshots
+
+# Repositorio Numix para Ubuntu. Temas de escritorio e iconos.
+sudo add-apt-repository ppa:numix/ppa
+
+# Repositorio Variety.
+sudo add-apt-repository ppa:peterlevi/ppa
+
+# Repositorio Simple Screen Recorder.
+sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+
+# Repositorio Google Chrome.
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+
+# Repositorio Oracle VirtualBox 5.1.2.
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian xenial contrib" >> /etc/apt/sources.list.d/virtualbox.list'
+
+# Repositorio Spotify.
+sudo echo deb http://repository.spotify.com testing non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
+
+# Repositorio Dropbox
+sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+sudo sh -c 'echo "deb http://linux.dropbox.com/ubuntu/ xenial main" >> /etc/apt/sources.list.d/dropbox.list'
+
 # Actualizamos el sistema.
 sudo apt-get update
 sudo apt-get upgrade
@@ -32,7 +72,7 @@ sudo apt-get -y install virtualbox-5.1
 sudo apt-get -y install dkms
 
 # Cliente Dropbox
-sudo apt-get -y install dropbox 
+sudo apt-get -y install dropbox
 
 # Cliente Spotify.
 sudo apt-get -y install spotify-client
@@ -47,6 +87,12 @@ sudo apt-get -y install handbrake-gtk
 sudo apt-get -y install numix-gtk-theme
 sudo apt-get -y install numix-icon-theme-circle
 
+# Simple Screen Recorder.
+sudo apt-get -y install simplescreenrecorder
+
+# if you want to record 32-bit OpenGL applications on a 64-bit system:
+sudo apt-get -y install simplescreenrecorder-lib:i386
+
 # Instalamos Aptitude.
 sudo apt-get -y install aptitude
 
@@ -56,7 +102,7 @@ sudo apt-get -y install gdebi
 # Herramienta gráfica para la gestión de paquetes.
 sudo apt-get -y install synaptic
 
-# Instalar Ubuntu Restricted Extras. Flash player Plugin, Codecs multimedia y Fonts de microsoft.  
+# Instalar Ubuntu Restricted Extras. Flash player Plugin, Codecs multimedia y Fonts de microsoft.
 sudo apt-get -y install ubuntu-restricted-extras
 
 # Cpufreq Indicator
